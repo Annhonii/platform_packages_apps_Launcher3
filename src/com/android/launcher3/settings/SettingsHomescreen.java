@@ -73,6 +73,15 @@ public class SettingsHomescreen extends CollapsingToolbarBaseActivity {
 
             PreferenceScreen screen = getPreferenceScreen();
             filterPreferenceGroup(screen);
+            final Preference vAccent = screen.findPreference("pref_quickspace_voltage_accent");
+            final androidx.preference.ListPreference qsStyle = screen.findPreference("pref_quickspace_style");
+            if (vAccent != null && qsStyle != null) {
+                vAccent.setVisible("2".equals(qsStyle.getValue()));
+                qsStyle.setOnPreferenceChangeListener((p, v) -> {
+                    vAccent.setVisible("2".equals(String.valueOf(v)));
+                    return true;
+                });
+            }
         }
 
         private void filterPreferenceGroup(PreferenceGroup group) {
