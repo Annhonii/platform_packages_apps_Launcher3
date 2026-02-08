@@ -296,6 +296,7 @@ constructor(@ApplicationContext private val encryptedContext: Context) {
         val PROMISE_ICON_IDS = nonRestorableItem(InstallSessionHelper.PROMISE_ICON_IDS, "")
         @JvmField val SHOW_HOTSEAT_BG = backedUpItem("pref_show_hotseat_bg", false)
         @JvmField val SHOW_QUICKSPACE = backedUpItem("pref_quickspace", true)
+        @JvmField val QUICKSPACE_BLACK_TEXT = backedUpItem("pref_quickspace_black_text", false)
 	@JvmField val QUICKSPACE_UI_STYLE = backedUpItem("pref_quickspace_style", "0")
         @JvmField val QUICKSPACE_VOLTAGE_ACCENT = backedUpItem("pref_quickspace_voltage_accent", true)
         @JvmField val SHOW_QUICKSPACE_PSONALITY = backedUpItem("pref_quickspace_psonality", true)
