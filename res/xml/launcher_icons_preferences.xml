@@ -68,4 +68,6 @@
         settings:units="%"
         android:defaultValue="100" />
 
+    <SwitchPreference android:key="pref_themed_icons_overlay" android:title="@string/themed_icons_overlay_title" android:summary="@string/themed_icons_overlay_summary" android:defaultValue="true" android:persistent="true" />
+
 </androidx.preference.PreferenceScreen>

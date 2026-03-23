@@ -736,4 +736,6 @@
     <string name="bliss_notification_badge_counts_disabled_summary">Enable notification dots first</string>
     <string name="disable_blur_title">Disable blur</string>
     <string name="disable_blur_summary">Turn off all background blur in launcher</string>
+    <string name="themed_icons_overlay_title">Overlayed themed icons</string>
+    <string name="themed_icons_overlay_summary">Use custom themed icons mapping for apps without native themed icon</string>
 </resources>
