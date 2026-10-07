@@ -50,7 +50,7 @@ open class QuickstepWidgetPickerActivity : WidgetPickerActivity(), WidgetPickerP
         isBlurEnabled =
             !shouldReduceWorkspaceBlurUsage(this) && WindowBlurState.getInstance(this).value
         isWallpaperZoomEnabled = !shouldReduceWorkspaceBlurUsage(this)
-        blurRadius = LauncherPrefs.BLUR_DEPTH.get(this)
+        blurRadius = com.android.quickstep.util.BlurDepthPref.getMaxBlurRadius(this)
 
         widgetPickerConfig = parseIntentExtras()
         super.onCreate(savedInstanceState)

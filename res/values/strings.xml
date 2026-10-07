@@ -734,4 +734,6 @@
     <string name="bliss_notification_badge_counts_title">Notification count</string>
     <string name="bliss_notification_badge_counts_summary">Show unread count on app icons instead of dots</string>
     <string name="bliss_notification_badge_counts_disabled_summary">Enable notification dots first</string>
+    <string name="disable_blur_title">Disable blur</string>
+    <string name="disable_blur_summary">Turn off all background blur in launcher</string>
 </resources>

@@ -32,7 +32,7 @@ open class QuickstepAddItemActivity : AddItemActivity(), WidgetPickerProgressHan
 
     override fun onCreate(savedInstanceState: Bundle?) {
         isBlurEnabled = Flags.enableWidgetPickerBlur() && WindowBlurState.getInstance(this).value
-        blurRadius = LauncherPrefs.BLUR_DEPTH.get(this)
+        blurRadius = com.android.quickstep.util.BlurDepthPref.getMaxBlurRadius(this)
 
         super.onCreate(savedInstanceState)
 

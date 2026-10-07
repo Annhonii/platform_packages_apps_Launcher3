@@ -185,7 +185,7 @@ class ScalingWorkspaceRevealAnim(
             )
 
             // Add a blur animation to the scrim layer.
-            val maxBlurRadius = LauncherPrefs.BLUR_DEPTH.get(launcher)
+            val maxBlurRadius = com.android.quickstep.util.BlurDepthPref.getMaxBlurRadius(launcher)
             val blurAnimator = ValueAnimator.ofFloat(1f, 0f)
             blurAnimator.interpolator = BLUR_INTERPOLATOR
             blurAnimator.addUpdateListener {

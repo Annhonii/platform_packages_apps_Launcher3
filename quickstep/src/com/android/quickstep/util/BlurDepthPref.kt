@@ -27,7 +27,7 @@ object BlurDepthPref {
     private var listenerRegistered = false
 
     private val prefListener = LauncherPrefChangeListener { key ->
-        if (key == LauncherPrefs.BLUR_DEPTH.sharedPrefKey) {
+        if (key == LauncherPrefs.BLUR_DEPTH.sharedPrefKey || key == LauncherPrefs.DISABLE_BLUR.sharedPrefKey) {
             cachedRadius = UNSET
         }
     }
@@ -42,9 +42,10 @@ object BlurDepthPref {
         synchronized(this) {
             if (!listenerRegistered) {
                 prefs.addListener(prefListener, LauncherPrefs.BLUR_DEPTH)
+                prefs.addListener(prefListener, LauncherPrefs.DISABLE_BLUR)
                 listenerRegistered = true
             }
         }
-        return prefs.get(LauncherPrefs.BLUR_DEPTH).also { cachedRadius = it }
+        return (if (prefs.get(LauncherPrefs.DISABLE_BLUR)) 0 else prefs.get(LauncherPrefs.BLUR_DEPTH)).also { cachedRadius = it }
     }
 }

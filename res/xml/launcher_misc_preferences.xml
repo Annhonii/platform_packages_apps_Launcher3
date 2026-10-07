@@ -42,4 +42,5 @@
         settings:units="px"
         android:defaultValue="30" />
 
+    <androidx.preference.SwitchPreferenceCompat android:key="pref_disable_blur" android:title="@string/disable_blur_title" android:summary="@string/disable_blur_summary" android:defaultValue="false" android:persistent="true" />
 </androidx.preference.PreferenceScreen>
