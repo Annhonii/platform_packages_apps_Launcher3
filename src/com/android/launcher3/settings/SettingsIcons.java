@@ -121,6 +121,13 @@ public class SettingsIcons extends CollapsingToolbarBaseActivity implements OnPr
             switch (preference.getKey()) {
                 case NOTIFICATION_DOTS_PREFERENCE_KEY:
                     return BuildConfig.NOTIFICATION_DOTS_ENABLED;
+                case "pref_themed_icons_overlay":
+                    preference.setOnPreferenceChangeListener((p, v) -> {
+                        new android.os.Handler(android.os.Looper.getMainLooper()).postDelayed(
+                                () -> android.os.Process.killProcess(android.os.Process.myPid()), 300);
+                        return true;
+                    });
+                    return true;
                 case KEY_NOTIFICATION_BADGE_COUNTS:
                     boolean dotsEnabled = SettingsCache.INSTANCE.get(getContext())
                             .getValue(NOTIFICATION_BADGING_URI);
